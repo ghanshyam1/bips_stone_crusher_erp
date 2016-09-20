@@ -11,8 +11,8 @@ public class DBConnection {
 		try{  
 		Class.forName("com.mysql.jdbc.Driver");  
 		con=DriverManager.getConnection(  
-		"jdbc:mysql://localhost:3306","root","bips123");  
-		System.out.println(con); 
+		"jdbc:mysql://localhost:3306/bips","root","bips123");  
+		//System.out.println(con); 
 		  
 		}catch(Exception e){ System.out.println(e);}  
 		

@@ -1,1 +1,8 @@
 com\bips\App.class
+com\bips\minning\beans\MinningBean.class
+com\bips\minning\services\MinningServiceImpl.class
+com\bips\minning\controller\MinningController.class
+com\bips\minning\utility\DBConnection.class
+com\bips\minning\controller\RecordFindingController.class
+com\bips\minning\DAO\MinningDao.class
+com\bips\minning\services\MinningService.class

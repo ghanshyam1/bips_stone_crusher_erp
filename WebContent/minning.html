@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://code.jquery.com/resource/demos/style.css"> 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+<!-- <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script type="text/javascript" src="../js/jquery-birthday-picker.min.js"></script>
+
+<link
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<link rel="stylesheet" href="../css/bootstrapValidator.min.css" />
+<script type="text/javascript" src="../js/bootstrapValidator.min.js"> </script> -->
+<!--  <link rel="stylesheet" href="css/bootstrap.min.css" >-->
+
+
+
+<body>
+
+       <form action="MinningController" method="post">
+       
+       <table>
+       <tr>
+       <td>
+           <div  style="margin-top:20px">
+             <label style="margin-left: 30px;">NO OF HOLES</label><br>
+             <input type="text" name="no_of_holes" id="no_of_holes">&nbsp;&nbsp;&nbsp;
+           </div>   
+           </td> 
+            <td>
+           <div  style="margin-top:20px">
+             <label style="margin-left: 30px;">FEET </label><br>
+             <input type="text" name="feet" id="feet" style="margin-left: 10px;">&nbsp;&nbsp;&nbsp;
+           </div>
+           </td> 
+            <!-- <td>
+           <div  style="margin-top:20px">
+             <label style="margin-left: 30px;">TOTAL FEET </label><br>
+             <input type="text" name="totalfeet" id="totalfeet" style="margin-left: 10px;">&nbsp;&nbsp;&nbsp;
+           </div>   
+           </td> -->
+            <td>
+           <div  style="margin-top:20px">
+             <label style="margin-left: 30px;">ONE FEET RATE </label><br>
+             <input type="text" name="onefeetrate" id="onefeetrate" style="margin-left: 10px;">&nbsp;&nbsp;&nbsp;
+           </div> 
+           </td>
+            <!-- <td>
+          <div  style="margin-top:20px">
+             <label style="margin-left: 30px;">TOTAL</label><br>
+             <input type="text" name="total" id="total" style="margin-left: 10px;">&nbsp;&nbsp;&nbsp;
+          </div>  
+          </td> -->
+          <td>
+          <div  style="margin-top:20px">
+             <label style="margin-left: 30px;">Date</label><br>
+             <input type="text" name="date" id="datepicker" style="margin-left: 10px;">&nbsp;&nbsp;&nbsp;
+          </div>  
+          </td>
+          <td>
+          <div  style="margin-top:100px">
+             <input type="submit" value="Submit" id="submit" size="10" style="margin-left: 10px;">&nbsp;&nbsp;&nbsp;
+          </div> 
+          <div style="margin-top:45px">
+          <a href="findRecord.html">FindRecord</a>
+          </div> 
+          </td>
+          </tr>
+          
+          </table>
+          
+          
+
+</body>
+</html>
