@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 
+
 import com.bips.minning.beans.MinningBean;
 import com.bips.minning.utility.DBConnection;
 
@@ -38,11 +39,13 @@ public class MinningDao {
 		Connection con=connection.connection();
 		
 		try {Statement stmt=con.createStatement();
-			String query="select * from minning where date in("+"'"+fromdate+"'"+","+"'"+todate+"'"+")";
+			String query="select * from minning where date between" +"'"+fromdate+"'"+"and"+"'"+todate+"'";
+			//select * from minning where date between '09/18/2016' and '09/22/2016';
 			System.out.println(query);
 			ResultSet rs=stmt.executeQuery(query);
-			MinningBean mb=new MinningBean();
+			
 			while(rs.next()){
+				MinningBean mb=new MinningBean();
 				mb.setNoOfHoles(Integer.parseInt(rs.getString(1)));
 				mb.setFeet(Integer.parseInt(rs.getString(2)));
 				mb.setOnefeetrate(Float.parseFloat(rs.getString(3)));
@@ -71,7 +74,7 @@ public class MinningDao {
 		Connection con=connection.connection();
 		
 		try {Statement stmt=con.createStatement();
-			String query="select sum(noOfHoles),sum(totalFeet),sum(totalRS) from minning where date in("+"'"+fromdate+"'"+","+"'"+todate+"'"+")";
+			String query="select sum(noOfHoles),sum(totalFeet),sum(totalRS) from minning where date between" +"'"+fromdate+"'"+"and"+"'"+todate+"'";
 			
 			System.out.println(query);
 			ResultSet rs=stmt.executeQuery(query);

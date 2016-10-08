@@ -1,6 +1,6 @@
 package com.bips.minning.services;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.bips.minning.DAO.MinningDao;
@@ -16,13 +16,15 @@ public class MinningServiceImpl implements MinningService {
 		md.insertDataInDB(noOfHoles,feet,rate,date,totalFeet,totalRS);
 		return "record insert successfully";
 	}
-	public List<MinningBean> findRecord(String fromdate,String todate){
-		
+	public List findRecord(String fromdate,String todate){
+		List mainList=new LinkedList();
 		MinningDao md=new MinningDao();
 	List<MinningBean> list=	md.findRecord(fromdate,todate);
-	  total(fromdate,todate);
-		System.out.println(list +"ghanshyam");
-		return list;
+	 List totalList= total(fromdate,todate);
+		System.out.println(totalList +"ghanshyam");
+		mainList.add(list);
+		mainList.add(totalList);
+		return mainList;
 	}
 	
 	public List total(String fromdate,String todate){
